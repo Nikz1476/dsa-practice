@@ -8,4 +8,7 @@ class Solution:
                 nums[j] = nums[i]
             
         return j+1
-        
+
+
+#Time complexity - O(n)
+#Space complexity - O(1)
