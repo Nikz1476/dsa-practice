@@ -25,3 +25,8 @@ class Solution:
         res.extend(right[j:])
 
         return res
+
+        
+#Time complexity - O(n log n)
+#Space complexity - O(n)
+#heap sort/ quick sort can also be used
