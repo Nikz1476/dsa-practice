@@ -23,5 +23,6 @@ class Solution(object):
 
         # return mask ^ num
 
+        # optimal, time and space - O(1)
         mask = (1 << num.bit_length()) - 1
         return num ^ mask
