@@ -1,16 +1,13 @@
+from collections import defaultdict
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        # O(n^2) solution
-        # for i in range(len(nums)):
-        #     for j in range(i + 1, len(nums)):  
-        #         if nums[i] == nums[j]:
-        #             return True
-        # return False
+        
+        freqcount = defaultdict(int)
 
-        #O(n) - optimal
-        seen = set()
-        for i in nums:
-            if i in seen:
+        for x in nums:
+            freqcount[x] = freqcount.get(x,0) + 1
+        
+        for value in freqcount.values():
+            if value > 1:
                 return True
-            seen.add(i)
         return False
